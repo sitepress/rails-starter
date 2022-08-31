@@ -31,7 +31,8 @@ module PageHelper
     render partial: path, locals: locals, &block
   end
 
-  def page_github_path
-    page.asset.path
+  def page_github_path(page=current_page)
+    app_path = Pathname.new(page.asset.path.path).relative_path_from Rails.root
+    URI.join("https://github.com/sitepress/rails-starter/blob/main/", app_path.to_s).to_s
   end
 end
