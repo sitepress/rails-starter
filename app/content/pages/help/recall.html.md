@@ -1,6 +1,6 @@
 ---
 title: Recall
-layout: article
+layout: help
 ---
 
 The following countries have issued a recall Awesome Sauce:

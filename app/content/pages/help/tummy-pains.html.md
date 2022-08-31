@@ -1,6 +1,6 @@
 ---
 title: Tummy pains
-layout: article
+layout: help
 ---
 
 Why does my Tummy hurt when I eat Awesome Sauce?

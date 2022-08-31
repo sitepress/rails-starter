@@ -1,6 +1,6 @@
 ---
 title: Opening package
-layout: article
+layout: help
 ---
 
 Awesome Sauce comes in a bottle. To open it:

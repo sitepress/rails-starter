@@ -1,0 +1,7 @@
+=render_layout "article" do
+  =yield
+  .mt-12
+    h3 Related articles
+    ul
+      -current_page.siblings.reject{ _1 == current_page }.each do |page|
+        li=link_to_page page
