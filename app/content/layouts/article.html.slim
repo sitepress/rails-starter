@@ -1,0 +1,4 @@
+=render_layout "page" do
+  .flex.flex-col.gap-10
+    h1.text-6xl.font-bold=current_page.data.fetch("title")
+    .prose=yield

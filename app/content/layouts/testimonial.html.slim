@@ -1,0 +1,5 @@
+=render_layout "article" do
+  =yield
+  .grid.md:grid-cols-3.gap-12
+    -current_page.data.fetch("images").each do |image|
+      =image_tag image

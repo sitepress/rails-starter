@@ -1,0 +1,34 @@
+---
+title: Awesome Sauce
+---
+
+main.flex.flex-col.gap-y-24
+  article.flex.flex-col.gap-y-24
+    section.flex.flex-col.justify-center.align-center class="min-h-[40vh]"
+      h1.text-6xl.font-extrabold Awesome Sauce
+      h2.text-3xl Just one taste and you'll become successful and rich
+      =link_to "Sign up today and get some serious 💵💵💵", email_authentication_url, class: "bg-green-600 hover:bg-green-500 text-white py-4 px-8 max-w-fit rounded-lg mt-8 font-semibold text-lg"
+    section.flex.flex-col
+      h2.text-4xl.font-extrabold Our customers just can't get enough of Awesome Sauce
+      p.text-lg.mb-12 Don't take our word for it, see what these amazing creatures have to say about it.
+
+      .grid.md:grid-cols-3.gap-8
+        -TestimonialPage.all.each do |testimonial|
+          =link_to testimonial.request_path, class: "rounded-lg drop-shadow-md hover:drop-shadow-xl" do
+            =image_tag testimonial.image, class: "rounded-t-lg"
+            .p-4.bg-white
+              quote=testimonial.quote
+              .ml-4.mt-4. - #{testimonial.title}
+  footer
+    .flex.flex-row.gap-x-12.mb-12
+      =partial "partials/footer_nav",
+        name: "Testimonials",
+        glob: "testimonials/**.html.*"
+
+      =partial "partials/footer_nav",
+        name: "Legal",
+        glob: "legal/**.html.*"
+
+      =partial "partials/footer_nav",
+        name: "Help",
+        glob: "help/**.html.*"

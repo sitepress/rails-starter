@@ -1,0 +1,5 @@
+nav
+  h4.font-bold=name
+  ul
+    -site.glob(glob).each do |page|
+      li=link_to_page page

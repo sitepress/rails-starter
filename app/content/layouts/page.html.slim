@@ -1,0 +1,24 @@
+=render_layout "application" do
+  main.flex.flex-col.gap-y-24
+    div class="min-h-[50vh]"=yield
+    hr
+    footer
+      .flex.flex-row.gap-x-12.mb-12
+        =partial "partials/footer_nav",
+          name: "Testimonials",
+          glob: "testimonials/**.html.*"
+
+        =partial "partials/footer_nav",
+          name: "Legal",
+          glob: "legal/**.html.*"
+
+        =partial "partials/footer_nav",
+          name: "Help",
+          glob: "help/**.html.*"
+
+        nav
+          h4.font-bold Page
+          ul
+            li=link_to "View source"
+            li=link_to "Edit"
+            li=link_to "History"
